@@ -3,6 +3,8 @@ import supabase from "./config.js";
 
 console.log(supabase);
 
+// Get the email span
+let userEmail = document.getElementById("userEmail");
 let logoutbtn = document.getElementById("logout");
 
 async function  logout(e) {

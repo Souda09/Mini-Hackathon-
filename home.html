@@ -6,16 +6,33 @@
     <title>logout</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="veiw.css">
 </head>
 <body>
 
-    <!-- navbar -->
-     <!-- navbar -->
-     
+    
+    <nav class="navbar bg-body-tertiary">
+  <div class="container d-flex justify-content-between align-items-center">
+
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img src="post-office-svgrepo-com.svg" alt="Bootstrap" width="30" height="24">
+    </a>
+
+    <!-- User info + Logout -->
+    <div class="d-flex align-items-center gap-3">
+      <span id="userEmail" class="fw-semibold text-dark"></span>
+      <button class="btn btn-outline-danger btn-sm" onclick="logoutUser()">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </button>
+    </div>
+
+  </div>
+</nav>
+
 
     <!-- <h1>Wellcome Dear <span id="username"></span></h1> -->
-    <button id="logout"><i class="fa-solid fa-right-from-bracket"></i></button>
+    <!-- <button id="logout"><i class="fa-solid fa-right-from-bracket"></i>Logout</button> -->
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./auth.js" type="module"></script>
