@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage My Posts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .post-img-preview {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .table align-middle th {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">PostApp</a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link px-3" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link px-3 active fw-bold text-info" href="mypost.html">My Posts</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-3 text-white">
+        <small id="userEmail"></small>
+        <button class="btn btn-outline-danger btn-sm rounded-pill" onclick="logoutUser()">Logout</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold text-dark">Manage My Posts</h2>
+        <a href="./home.html" class="btn btn-primary">+ Create New Post</a>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th class="ps-4">Image</th>
+                            <th>Title</th>
+                            <th>Content Preview</th>
+                            <th>Date</th>
+                            <th class="text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="myOwnPostsTable">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- modal -->
+ <div class="modal fade" id="editModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg">
+      <div class="modal-header bg-warning text-dark">
+        <h5 class="modal-title fw-bold"><i class="fa-solid fa-pen-to-square"></i> Edit Your Post</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form id="editForm">
+          <input type="hidden" id="editPostId">
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Title</label>
+            <input type="text" id="editTitle" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Content</label>
+            <textarea id="editContent" class="form-control" rows="5" required></textarea>
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-warning fw-bold py-2">Update Post Now</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./mypost.js" type="module"></script>
+</body>
+</html>
