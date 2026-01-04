@@ -68,19 +68,19 @@ async function loadMyPosts(userId) {
 // 2. Delete Post Function
 window.deletePost = async (id) => {
     const result = await Swal.fire({
-        title: 'Kya aap sure hain?',
-        text: "Delete karne ke baad ye wapas nahi aayega!",
+        title: 'Sure?',
+        text: "Deleted posts cannot be retrieved!",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#d33',
         cancelButtonColor: '#3085d6',
-        confirmButtonText: 'Haan, delete kar dein!'
+        confirmButtonText: 'yes, delete it!'
     });
 
     if (result.isConfirmed) {
         const { error } = await supabase.from("PostApp").delete().eq("id", id);
         if (!error) {
-            Swal.fire('Deleted!', 'Post delete ho gayi hai.', 'success');
+            Swal.fire('Deleted!', 'Post delete .', 'success');
             const { data: { user } } = await supabase.auth.getUser();
             loadMyPosts(user.id); // Refresh table
         }
