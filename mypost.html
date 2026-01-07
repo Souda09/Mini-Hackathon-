@@ -16,6 +16,80 @@
         .table align-middle th {
             background-color: #f8f9fa;
         }
+        
+        body {
+            background-color: rgb(238, 240, 241);
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            backdrop-filter: blur(10px);
+            background: #263870 !important;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        /* Professional Card Animation */
+        .post-card {
+            transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .post-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.08);
+        }
+
+        .card-img-container {
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .card-img-top {
+            transition: transform 0.5s ease;
+            object-fit: cover;
+            height: 100%;
+        }
+
+        .post-card:hover .card-img-top {
+            transform: scale(1.1);
+        }
+
+        /* Button Styling */
+        .btn-primary {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            border: none;
+            border-radius: 12px;
+            padding: 10px 20px;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+        }
+
+        /* Form Styling */
+        #postForm {
+            border-radius: 20px;
+            background: #ffffff;
+            border: none !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            padding: 12px;
+            border: 1px solid #eef0f2;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 0 0.25 red rgba(0, 123, 255, 0.1);
+            border-color: #007bff;
+        }
+   
     </style>
 </head>
 <body class="bg-light">
@@ -30,7 +104,7 @@
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mx-auto">
-        <li class="nav-item"><a class="nav-link px-3" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="home.html">Posts</a></li>
         <li class="nav-item"><a class="nav-link px-3 active fw-bold text-info" href="mypost.html">My Posts</a></li>
       </ul>
 

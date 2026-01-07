@@ -1,13 +1,14 @@
 
         body {
-            background-color: rgb(238, 240, 241);
+            background-color: #011141 !important;
             font-family: 'Inter', sans-serif;
         }
 
+ 
         /* Navbar Styling */
         .navbar {
             backdrop-filter: blur(10px);
-            background: #263870 !important;
+            background:rgb(238, 240, 241);
             border-bottom: 1px solid #e0e0e0;
         }
 
@@ -72,3 +73,91 @@
             border-color: #007bff;
         }
    
+
+
+        /* ===== General Body Styling ===== */
+body {
+  background-color: #f4f6f9;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Navbar Enhancement ===== */
+.navbar {
+  background: #ffffff !important;
+}
+
+.navbar-brand img {
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1);
+}
+
+/* ===== Form Card Styling ===== */
+#postForm {
+  max-width: 600px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 12px;
+  border: none;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Inputs & Textarea ===== */
+#postForm .form-control {
+  border-radius: 8px;
+  border: 1px solid #dce1e7;
+  padding: 12px 14px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+#postForm .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
+}
+
+/* ===== File Input ===== */
+#postForm input[type="file"] {
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* ===== Button Styling ===== */
+#postForm button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 30px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+#postForm button:hover {
+  background: linear-gradient(135deg, #0b5ed7, #084298);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.35);
+}
+
+/* ===== My Posts Section ===== */
+#myPosts {
+  margin-top: 30px;
+}
+
+/* ===== Headings ===== */
+h2 {
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* ===== Responsive Fix ===== */
+@media (max-width: 576px) {
+  #postForm {
+    padding: 20px;
+  }
+}

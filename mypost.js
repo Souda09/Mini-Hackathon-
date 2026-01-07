@@ -39,7 +39,7 @@ async function loadMyPosts(userId) {
     }
 
     if (posts.length === 0) {
-        tableBody.innerHTML = `<tr><td colspan="5" class="text-center p-4 text-muted">Aapne abhi tak koi post nahi banayi.</td></tr>`;
+        tableBody.innerHTML = `<tr><td colspan="5" class="text-center p-4 text-muted">You haven’t created any posts yet.</td></tr>`;
         return;
     }
 
@@ -130,7 +130,7 @@ if (editForm) {
             Swal.fire({
                 icon: 'success',
                 title: 'Updated!',
-                text: 'Post kamyabi se update ho gayi.',
+                text: 'Post Updated Successfully.',
                 timer: 1500,
                 showConfirmButton: false
             });
